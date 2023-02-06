@@ -125,7 +125,7 @@ export class Format implements FormatDefinition {
    * @param {String} locale  The language locale such as en-US, pt-BR, zh, es, etc.
    * @returns {Object}  Object which may contain year, month, day, hour, minute, second, millisecond, offset
    */
-  public toDateTime(matches: Array<string | null>, locale = DEFAULT_LOCALE): DateObject | null {
+  public toDateTime(matches: Array<string | null>, locale = DEFAULT_LOCALE): DateObject<number> | null {
     const locHelper = LocaleHelper.factory(locale);
 
     if (this.units) {
@@ -147,7 +147,7 @@ export class Format implements FormatDefinition {
    * @param {String} locale  The language locale such as en-US, pt-BR, zh, es, etc.
    * @returns {Object|null}  Null if format can't handle this string, Object for result or error
    */
-  public attempt(string: string, locale = DEFAULT_LOCALE) {
+  public attempt(string: string, locale = DEFAULT_LOCALE): DateObject<number> | null {
     string = String(string).trim();
 
     const matches = this.getMatches(string, locale);

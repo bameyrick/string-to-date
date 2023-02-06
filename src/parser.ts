@@ -85,7 +85,7 @@ export class Parser {
    * @param {String} locale  The name of the locale
    * @returns {Object | null} - Returns a DateObject if the string was parsed successfully, otherwise it returns null
    */
-  public parseToObject(date: string, locale = DEFAULT_LOCALE): DateObject | null {
+  public parseToObject(date: string, locale = DEFAULT_LOCALE): DateObject<number> | null {
     date = date.replace(/\s+/g, ' ').trim();
 
     for (const format of this.formats) {
