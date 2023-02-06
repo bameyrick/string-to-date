@@ -1,4 +1,4 @@
-# string-to-date
+# @qntm-code/string-to-date
 
 Parse a wide range of date formats including human-input dates.
 
@@ -16,7 +16,7 @@ yarn add string-to-date
 
 ## Table of Contents
 
-- [string-to-date](#string-to-date)
+- [@qntm-code/string-to-date](#qntm-codestring-to-date)
   - [Installation](#installation)
   - [Table of Contents](#table-of-contents)
   - [Usage](#usage)
