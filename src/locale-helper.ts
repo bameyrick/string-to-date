@@ -54,8 +54,8 @@ export class LocaleHelper {
 
     let latn = '';
 
-    for (let i = 0; i < digitString.length; i++) {
-      latn += String(this.lookups.digit[digitString[i]]);
+    for (const digit of digitString) {
+      latn += String(this.lookups.digit[digit]);
     }
 
     return parseInt(latn, 10);

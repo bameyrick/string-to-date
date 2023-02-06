@@ -20,7 +20,7 @@ testDates({
   name: 'day monthname two digit year',
   expected: { year: 2020, month: 1, day: 1 },
   // non-latin numerals can't handle two-digit years
-  locales: LOCALE_LIST.filter(l => !/^ar|zh|bn/.test(l)),
+  locales: LOCALE_LIST.filter(l => !/^ar|^zh|^bn/.test(l)),
   formats: ['dd MMM yy', 'd MMM yy'],
 });
 
