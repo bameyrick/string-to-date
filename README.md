@@ -33,6 +33,7 @@ yarn add string-to-date
     - [Testing](#testing)
   - [Contributing](#contributing)
   - [Exhaustive list of date formats](#exhaustive-list-of-date-formats)
+  - [Credits](#credits)
 
 ## Usage
 
@@ -357,3 +358,7 @@ chinese
 - `2020年9月26日`
 - `2020 年 9 月 26 日`
 - `２０１７年０８月３１日`
+
+## Credits
+
+This package is based on [any-date-parser](https://www.npmjs.com/package/any-date-parser) by [Ken Snyder](https://github.com/kensnyder)
