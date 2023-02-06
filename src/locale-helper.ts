@@ -224,7 +224,7 @@ export class LocaleHelper {
 
           if (dateStyle === 'medium') {
             // some languages (including arabic and chinese) don't have a 'medium' size
-            if (/^ar|zh/i.test(this.locale)) {
+            if (/^ar|^zh/i.test(this.locale)) {
               return;
             }
             text = text.replace(/\.$/, '');

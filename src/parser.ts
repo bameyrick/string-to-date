@@ -101,13 +101,6 @@ export class Parser {
       }
     }
 
-    // Uh Oh! We don't know that one
-    let string = String(date).slice(0, 200);
-
-    if (string === '') {
-      string = 'empty string';
-    }
-
     return null;
   }
 }

@@ -4,7 +4,7 @@ testDates({
   name: 'monthname day year',
   expected: { year: 2016, month: 3, day: 27 },
   // ar and zh do not have a monthname
-  locales: LOCALE_LIST.filter(l => !/^ar|zh/.test(l)),
+  locales: LOCALE_LIST.filter(l => !/^ar|^zh/.test(l)),
   formats: [
     'cccc, MMMM dd yyyy',
     'cccc MMMM dd yyyy',

@@ -3,7 +3,7 @@ import { LOCALE_LIST, testDates } from '../../test-fixtures';
 testDates({
   name: 'monthname day',
   expected: { month: 6, day: 28 },
-  locales: LOCALE_LIST.filter(l => !/^ar|zh/.test(l)),
+  locales: LOCALE_LIST.filter(l => !/^ar|^zh/.test(l)),
   formats: ['cccc, MMMM dd', 'cccc MMMM dd', 'ccc, MMMM dd', 'ccc MMMM dd', 'MMMM dd', 'MMM dd'],
 });
 
