@@ -8,6 +8,10 @@
     "type": "git",
     "url": "git+https://github.com/bameyrick/string-to-date.git"
   },
+  "bugs": {
+    "url": "https://github.com/bameyrick/string-to-date/issues"
+  },
+  "homepage": "https://github.com/bameyrick/string-to-date#readme",
   "license": "ISC",
   "publishConfig": {
     "access": "public"
