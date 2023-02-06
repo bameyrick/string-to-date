@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "include": ["src/**/*"],
+  "exclude": ["src/**/*.spec.ts", "src/test-fixtures/**/*"],
   "compilerOptions": {
     "outDir": "dist/mjs"
   }

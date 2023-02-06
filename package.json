@@ -1,12 +1,28 @@
 {
-  "name": "string-to-date",
+  "name": "@qntm-code/string-to-date",
   "version": "1.0.0",
   "description": "Parse date strings including human readable dates to a Date object",
-  "main": "index.js",
   "keywords": ["date", "parser", "parse", "datetime", "parse", "date", "string", "to", "date", "human", "localization", "localisation"],
   "author": "Ben Meyrick <bameyrick@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bameyrick/string-to-date.git"
+  },
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "types": "./dist/mjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
+    "build": "npm run tidy-clean && npm run lint && tsc -p tsconfig.mjs.json && cpy package.mjs.json dist/mjs --rename package.json && tsc -p tsconfig.cjs.json && cpy package.cjs.json dist/cjs --rename package.json",
     "test": "npm run tidy-clean && jest --coverage",
     "lint": "npm run tidy-clean && eslint",
     "tidy-clean": "rimraf dist coverage",
@@ -34,6 +50,7 @@
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
+    "cpy-cli": "^4.2.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
