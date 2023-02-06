@@ -2,6 +2,10 @@
 
 Parse a wide range of date formats including human-input dates.
 
+[![GitHub release](https://img.shields.io/github/release/bameyrick/string-to-date.svg)](https://github.com/bameyrick/string-to-date/releases)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bameyrick_string-to-date&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=bameyrick_string-to-date)
+[![codecov](https://codecov.io/gh/bameyrick/string-to-date/branch/main/graph/badge.svg)](https://codecov.io/gh/bameyrick/string-to-date)
+
 ## Installation
 
 ```bash
