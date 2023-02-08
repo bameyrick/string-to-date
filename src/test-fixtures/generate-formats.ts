@@ -7,10 +7,10 @@ export function generateFormats(
 ): string[] {
   const formats: string[] = [];
 
-  for (const dayFormat of dayFormats) {
-    for (const monthFormat of monthFormats) {
-      for (const yearFormat of yearFormats) {
-        for (const separatorFormat of separatorFormats) {
+  for (const separatorFormat of separatorFormats) {
+    for (const yearFormat of yearFormats) {
+      for (const monthFormat of monthFormats) {
+        for (const dayFormat of dayFormats) {
           const format = template
             .replace('DAY', dayFormat)
             .replace('MONTH', monthFormat)

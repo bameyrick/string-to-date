@@ -39,7 +39,7 @@ export function testDates({
         it(`${formatted} (${format})`, () => {
           const actual = StringToDate.parseToObject(formatted, locale);
 
-          expect(actual).toMatchObject(expected);
+          expect(actual).toEqual(expect.objectContaining(expected));
         });
       }
     });

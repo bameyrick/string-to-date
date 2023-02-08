@@ -67,8 +67,10 @@ export class LocaleHelper {
    * @param {Array} matches  The values matched by a Format's RegExp
    * @returns {Object}
    */
-  public getObject(units: Array<Units | 'offset' | null>, matches: Array<string | null>): DateObject<number> {
-    const object: DateObject<number> = {};
+  public getObject(units: Array<Units | 'offset' | null>, matches: Array<string | null>, formatter?: string): DateObject<number> {
+    const object: DateObject<number> = {
+      formatter,
+    };
 
     units.forEach((unit, i) => {
       if (!unit) {
@@ -99,8 +101,10 @@ export class LocaleHelper {
    * @param {Object} object  An object with one or more units
    * @returns {Object}  An object with same units but Numeric
    */
-  public castObject(object: LocaleCastConfig): DateObject<number> {
-    const casted: DateObject<number> = {};
+  public castObject(object: LocaleCastConfig, formatter?: string): DateObject<number> {
+    const casted: DateObject<number> = {
+      formatter,
+    };
 
     Object.entries(object).forEach(([unit, value]) => {
       if (unit in Unit) {

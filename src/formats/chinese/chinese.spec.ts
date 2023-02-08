@@ -15,7 +15,7 @@ describe('chinese with full-width digits', () => {
   it('should handle date', () => {
     const actual = StringToDate.parseToObject('２０１７年０８月３１日');
     const expected = { year: 2017, month: 8, day: 31 };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });
 
@@ -25,6 +25,6 @@ describe('chinese with full-width digits', () => {
   it('should handle date', () => {
     const actual = StringToDate.parseToObject('二〇一七年〇八月三一日');
     const expected = { year: 2017, month: 8, day: 31 };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });

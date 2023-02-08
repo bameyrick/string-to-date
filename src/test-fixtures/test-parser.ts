@@ -19,7 +19,7 @@ export function testParser({
         it(`should handle "${date}" (${locale})`, () => {
           const actual = StringToDate.parseToObject(date, locale);
 
-          expect(actual).toEqual(expected);
+          expect(actual).toEqual(expect.objectContaining(expected));
         });
       });
     });

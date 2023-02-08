@@ -8,6 +8,11 @@ export type FormatHandler = (matches: Array<string | null>, locale: string) => D
 
 export interface FormatDefinition {
   /**
+   * Name of the formatter
+   */
+  name: string;
+
+  /**
    * A template for RegExp that can handle multiple languages
    */
   template?: string;
@@ -39,6 +44,11 @@ export interface FormatDefinition {
 }
 
 export class Format implements FormatDefinition {
+  /**
+   * Name of the formatter
+   */
+  public readonly name: string;
+
   /**
    *  A template for RegExp that can handle multiple languages
    */
@@ -74,7 +84,7 @@ export class Format implements FormatDefinition {
    */
   private readonly regexByLocale: Record<string, RegExp> = {};
 
-  constructor({ template, matcher, units, handler, locales }: FormatDefinition) {
+  constructor({ name, template, matcher, units, handler, locales }: FormatDefinition) {
     if (!Array.isArray(units) && typeof handler !== 'function') {
       throw new Error('new Format must receive a "units" array or "handler" function');
     }
@@ -83,6 +93,7 @@ export class Format implements FormatDefinition {
       throw new Error('new Format must receive a "template" string or "matcher" RegExp');
     }
 
+    this.name = name;
     this.template = template;
     this.units = units;
     this.matcher = matcher;
@@ -129,7 +140,7 @@ export class Format implements FormatDefinition {
     const locHelper = LocaleHelper.factory(locale);
 
     if (this.units) {
-      return locHelper.getObject(this.units, matches);
+      return locHelper.getObject(this.units, matches, this.name);
     }
 
     const dateObject = this.handler!(matches, locale);
@@ -138,7 +149,7 @@ export class Format implements FormatDefinition {
       return null;
     }
 
-    return locHelper.castObject(dateObject);
+    return locHelper.castObject(dateObject, this.name);
   }
 
   /**

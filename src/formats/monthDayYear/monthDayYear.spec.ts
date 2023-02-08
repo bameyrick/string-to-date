@@ -38,29 +38,35 @@ describe('month day year for other locales', () => {
   it('should recognize day month year with slashes instead', () => {
     const actual = StringToDate.parseToObject('5/3/2021', 'FR');
 
-    expect(actual).toEqual({
-      month: 3,
-      day: 5,
-      year: 2021,
-    });
+    expect(actual).toEqual(
+      expect.objectContaining({
+        month: 3,
+        day: 5,
+        year: 2021,
+      })
+    );
   });
   it('should recognize day month year with dashes instead', () => {
     const actual = StringToDate.parseToObject('5-3-2021', 'FR');
 
-    expect(actual).toEqual({
-      month: 3,
-      day: 5,
-      year: 2021,
-    });
+    expect(actual).toEqual(
+      expect.objectContaining({
+        month: 3,
+        day: 5,
+        year: 2021,
+      })
+    );
   });
 
   it('should recognize day month year with dashes instead', () => {
     const actual = StringToDate.parseToObject('5 3 2021', 'en-US');
 
-    expect(actual).toEqual({
-      month: 5,
-      day: 3,
-      year: 2021,
-    });
+    expect(actual).toEqual(
+      expect.objectContaining({
+        month: 5,
+        day: 3,
+        year: 2021,
+      })
+    );
   });
 });

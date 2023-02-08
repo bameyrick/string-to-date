@@ -13,7 +13,7 @@ describe('twitter time', () => {
       offset: 0,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
   it('should handle "Fri Apr 16 22:53:54 -0130 2017"', () => {
     const actual = StringToDate.parseToObject('Fri Apr 16 22:53:54 -0130 2017');
@@ -27,6 +27,6 @@ describe('twitter time', () => {
       offset: -90,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });

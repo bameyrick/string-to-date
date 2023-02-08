@@ -2,6 +2,7 @@ import { Format } from '../../format';
 import { DateObject } from '../../models';
 
 export const today = new Format({
+  name: 'today',
   matcher: /^(now|today|tomorrow|yesterday)/i,
   handler: match => {
     const now = new Date();

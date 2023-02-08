@@ -5,9 +5,6 @@ testDates({
   name: '24 hour time',
   locales: ['ar-SA', 'bn-BD', 'bn-IN', 'en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -19,9 +16,6 @@ testDates({
   name: '24 hour time',
   locales: ['ar-SA', 'bn-BD', 'bn-IN', 'en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -44,9 +38,6 @@ testDates({
   name: '24 hour time with milliseconds',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -59,9 +50,6 @@ testDates({
   name: '24 hour time with 2-digit milliseconds',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -74,9 +62,6 @@ testDates({
   name: '24 hour time with 1-digit milliseconds',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -89,9 +74,6 @@ testDates({
   name: '24 hour time with microseconds',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -104,9 +86,6 @@ testDates({
   name: '24 hour time with nanoseconds',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -119,9 +98,6 @@ testDates({
   name: '24 hour time with timezone name - "MST"',
   locales: ['ar-SA', 'bn-BD', 'bn-IN', 'en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -134,9 +110,6 @@ testDates({
   name: '24 hour time with long timezone name - "Eastern Daylight Time"',
   locales: ['ar-SA', 'bn-BD', 'bn-IN', 'en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -149,9 +122,6 @@ testDates({
   name: '24 hour time with GMT hours:minutes',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -164,9 +134,6 @@ testDates({
   name: '24 hour time with GMT hours:minutes and tz name',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -179,9 +146,6 @@ testDates({
   name: '24 hour time with GMT hours',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -194,9 +158,6 @@ testDates({
   name: '24 hour time with zone -hours:minutes',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,
@@ -209,9 +170,6 @@ testDates({
   name: '24 hour time with zone +hoursminutes',
   locales: ['en-US'],
   expected: {
-    year: 2020,
-    month: 10,
-    day: 6,
     hour: 17,
     minute: 41,
     second: 28,

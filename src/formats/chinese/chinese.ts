@@ -4,7 +4,10 @@ import { LocaleHelper } from '../../locale-helper';
 
 let locHelper: LocaleHelper;
 
+const name = 'chinese';
+
 export const chinese = new Format({
+  name,
   /* prettier-ignore */
   //           $1                         $2                  $3
   template: `^(${CHINESE_GROUP}{4}|${CHINESE_GROUP}{2})\\s*年\\s*(${CHINESE_GROUP}{1,2})\\s*月\\s*(${CHINESE_GROUP}{1,2})\\s*日$`,
@@ -16,6 +19,6 @@ export const chinese = new Format({
       locHelper.buildDigits();
     }
 
-    return locHelper.castObject({ year: year!, month: month!, day: day! });
+    return locHelper.castObject({ year: year!, month: month!, day: day! }, name);
   },
 });

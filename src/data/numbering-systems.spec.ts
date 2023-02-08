@@ -18,7 +18,7 @@ describe('unicode numbering systems', () => {
         '٩': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "arabext"', () => {
@@ -38,7 +38,7 @@ describe('unicode numbering systems', () => {
         '۹': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "bali"', () => {
@@ -58,7 +58,7 @@ describe('unicode numbering systems', () => {
         '᭙': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "beng"', () => {
@@ -78,7 +78,7 @@ describe('unicode numbering systems', () => {
         '৯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "deva"', () => {
@@ -98,7 +98,7 @@ describe('unicode numbering systems', () => {
         '९': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "fullwide" and "hanidec"', () => {
@@ -139,7 +139,7 @@ describe('unicode numbering systems', () => {
         九: 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
     expect(hanidec).toEqual(expected);
   });
 
@@ -160,7 +160,7 @@ describe('unicode numbering systems', () => {
         '૯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "khmr"', () => {
@@ -180,7 +180,7 @@ describe('unicode numbering systems', () => {
         '៩': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "knda"', () => {
@@ -200,7 +200,7 @@ describe('unicode numbering systems', () => {
         '೯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "laoo"', () => {
@@ -220,7 +220,7 @@ describe('unicode numbering systems', () => {
         '໙': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "latn"', () => {
@@ -260,7 +260,7 @@ describe('unicode numbering systems', () => {
         九: 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "limb"', () => {
@@ -280,7 +280,7 @@ describe('unicode numbering systems', () => {
         '᥏': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "mlym"', () => {
@@ -300,7 +300,7 @@ describe('unicode numbering systems', () => {
         '൯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "mong"', () => {
@@ -320,7 +320,7 @@ describe('unicode numbering systems', () => {
         '᠙': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "mymr"', () => {
@@ -340,7 +340,7 @@ describe('unicode numbering systems', () => {
         '၉': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "orya"', () => {
@@ -360,7 +360,7 @@ describe('unicode numbering systems', () => {
         '୯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "tamldec"', () => {
@@ -380,7 +380,7 @@ describe('unicode numbering systems', () => {
         '௯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "telu"', () => {
@@ -400,7 +400,7 @@ describe('unicode numbering systems', () => {
         '౯': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "thai"', () => {
@@ -420,7 +420,7 @@ describe('unicode numbering systems', () => {
         '๙': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should build "tibt"', () => {
@@ -440,6 +440,6 @@ describe('unicode numbering systems', () => {
         '༩': 9,
       },
     };
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });

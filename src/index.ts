@@ -24,13 +24,13 @@ const StringToDate = new Parser();
 
 // all formats can have time strings at the end
 StringToDate.addFormats([
+  // from most unambiguous and popular to least
   time24Hours,
   time12Hours,
   dayMonthnameYear,
   monthnameDayYear,
   monthDayYear,
   dayMonthYear,
-  // from most unambiguous and popular to least
   yearMonthDay,
   chinese,
   twitter,
