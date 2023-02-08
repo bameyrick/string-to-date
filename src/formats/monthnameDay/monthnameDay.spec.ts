@@ -1,4 +1,4 @@
-import { LOCALE_LIST, testDates } from '../../test-fixtures';
+import { generateFormats, LOCALE_LIST, testDates } from '../../test-fixtures';
 
 testDates({
   name: 'monthname day',
@@ -8,8 +8,8 @@ testDates({
 });
 
 testDates({
-  name: 'monthname day year',
-  expected: { year: 2017, month: 2, day: 28 },
+  name: 'monthname day',
+  expected: { month: 2, day: 28 },
   locales: ['en', 'es', 'de', 'fi', 'fr', 'pt', 'no', 'nl', 'pl'],
-  formats: ['MMM dd yy'],
+  formats: generateFormats('MONTH-DAY', ['MMM', 'MMMM'], [' ']),
 });

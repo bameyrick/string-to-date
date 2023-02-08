@@ -1,8 +1,8 @@
-import { testDates } from '../../test-fixtures';
+import { generateFormats, testDates } from '../../test-fixtures';
 
 testDates({
   name: 'day month year',
-  expected: { year: 2020, month: 3, day: 3 },
-  locales: ['en-US'],
-  formats: ['dd/MM/yyyy', 'dd.MM.yyyy', 'dd/M/yyyy', 'dd.M.yyyy', 'd/M/yyyy', 'd.M.yyyy', 'dd/MM/yy', 'dd.MM.yy'],
+  expected: { year: 2020, month: 2, day: 5 },
+  locales: ['en-GB'],
+  formats: generateFormats('DAY-MONTH-YEAR'),
 });

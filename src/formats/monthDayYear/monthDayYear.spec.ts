@@ -1,5 +1,5 @@
 import StringToDate from '../..';
-import { testDates } from '../../test-fixtures';
+import { generateFormats, testDates } from '../../test-fixtures';
 
 testDates({
   name: 'month day year',
@@ -21,7 +21,7 @@ testDates({
     'sm-AS', // American Samoa (Samoan)
     'sm-SM', // Samoa
   ],
-  formats: ['MM/dd/yyyy', 'MM-dd-yyyy', 'M/dd/yyyy', 'M-dd-yyyy', 'MM/dd/yy', 'MM-dd-yy'],
+  formats: generateFormats('MONTH-DAY-YEAR'),
 });
 
 describe('month day year for other locales', () => {
@@ -50,6 +50,16 @@ describe('month day year for other locales', () => {
     expect(actual).toEqual({
       month: 3,
       day: 5,
+      year: 2021,
+    });
+  });
+
+  it('should recognize day month year with dashes instead', () => {
+    const actual = StringToDate.parseToObject('5 3 2021', 'en-US');
+
+    expect(actual).toEqual({
+      month: 5,
+      day: 3,
       year: 2021,
     });
   });

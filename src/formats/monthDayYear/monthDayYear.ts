@@ -3,7 +3,7 @@ import { Format } from '../../format';
 export const monthDayYear = new Format({
   /* prettier-ignore */
   //           $1       $2      $3        $4
-  template: "^(_MONTH_)([\\/-])(_DAY_)\\2(_YEAR_)$",
+  template: "^(_MONTH_)([\\/. -])(_DAY_)\\2(_YEAR_)$",
   units: ['month', null, 'day', 'year'],
   // only certain locales use this date
   // see https://en.wikipedia.org/wiki/Date_format_by_country
