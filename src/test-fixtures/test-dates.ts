@@ -1,5 +1,5 @@
 import { DateObjectUnits, DateTime, DateTimeJSOptions, FixedOffsetZone } from 'luxon';
-import StringToDate from '..';
+import StringToDate, { Format } from '..';
 import { DateObject } from '../models';
 
 export function testDates({
@@ -7,11 +7,13 @@ export function testDates({
   formats,
   expected,
   locales,
+  formatsToRemove,
 }: {
   name: string;
   formats: string[];
   expected: DateObject;
   locales: string[];
+  formatsToRemove?: Format[];
 }) {
   for (const locale of locales) {
     describe(`${name} (${locale})`, () => {
@@ -27,6 +29,12 @@ export function testDates({
 
         const date = DateTime.fromObject(luxonObj, opts);
         const formatted = date.toFormat(format, { locale });
+
+        if (formatsToRemove) {
+          for (const formatToRemove of formatsToRemove) {
+            StringToDate.removeFormat(formatToRemove);
+          }
+        }
 
         it(`${formatted} (${format})`, () => {
           const actual = StringToDate.parseToObject(formatted, locale);

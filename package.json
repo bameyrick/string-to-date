@@ -38,8 +38,7 @@
   "lint-staged": {
     "*.ts": [
       "prettier --print-width 140 --single-quote --arrow-parens avoid --trailing-comma es5 --parser typescript --write",
-      "eslint --fix --max-warnings 0",
-      "npm run test **/*.spec.ts"
+      "eslint --fix --max-warnings 0"
     ],
     "*.js": [
       "prettier --print-width 140 --single-quote --arrow-parens avoid --trailing-comma es5 --parser babel --write",

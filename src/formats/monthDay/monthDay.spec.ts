@@ -1,8 +1,8 @@
-import { testDates } from '../../test-fixtures';
+import { generateFormats, testDates } from '../../test-fixtures';
 
 testDates({
   name: 'month day',
   expected: { month: 3, day: 14 },
   locales: ['en-US'],
-  formats: ['MM/dd', 'MM-dd', 'M/dd', 'M-dd'],
+  formats: generateFormats('MONTH-DAY'),
 });
