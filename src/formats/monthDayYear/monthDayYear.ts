@@ -1,6 +1,7 @@
 import { Format } from '../../format';
 
 export const monthDayYear = new Format({
+  name: 'monthDayYear',
   /* prettier-ignore */
   //           $1       $2      $3        $4
   template: "^(_MONTH_)([\\/. -])(_DAY_)\\2(_YEAR_)$",

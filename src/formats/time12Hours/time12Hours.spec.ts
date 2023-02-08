@@ -7,7 +7,7 @@ describe('12 hour time', () => {
       hour: 20,
     };
 
-    expect(actual).toMatchObject(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle invalid date: "Foobarbaz at 8pm"', () => {
@@ -22,7 +22,7 @@ describe('12 hour time', () => {
       hour: 4,
     };
 
-    expect(actual).toMatchObject(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle minutes: "8:15pm"', () => {
@@ -32,7 +32,7 @@ describe('12 hour time', () => {
       minute: 15,
     };
 
-    expect(actual).toMatchObject(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle seconds: "8:15:14am"', () => {
@@ -43,7 +43,7 @@ describe('12 hour time', () => {
       second: 14,
     };
 
-    expect(actual).toMatchObject(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle leap seconds: "11:59:60pm"', () => {
@@ -54,7 +54,7 @@ describe('12 hour time', () => {
       second: 60,
     };
 
-    expect(actual).toMatchObject(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle dates: "March 14, 2015 9:26pm"', () => {
@@ -67,7 +67,7 @@ describe('12 hour time', () => {
       minute: 26,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle dates joined with "at": "March 14, 2015 at 9:26:53 am"', () => {
@@ -81,7 +81,7 @@ describe('12 hour time', () => {
       second: 53,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle dates with commas: "4/19/2021, 10:04:02 AM"', () => {
@@ -95,6 +95,6 @@ describe('12 hour time', () => {
       second: 2,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });

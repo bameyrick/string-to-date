@@ -18,7 +18,7 @@ describe('now, today, yesterday and tomorrow', () => {
       millisecond: 999,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "today"', () => {
@@ -29,7 +29,7 @@ describe('now, today, yesterday and tomorrow', () => {
       day: 31,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "tomorrow"', () => {
@@ -40,7 +40,7 @@ describe('now, today, yesterday and tomorrow', () => {
       day: 1,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "yesterday"', () => {
@@ -51,6 +51,6 @@ describe('now, today, yesterday and tomorrow', () => {
       day: 30,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });

@@ -3,7 +3,7 @@ import { Parser } from './parser';
 
 describe('Parser', () => {
   it('should set a parser prop on the format', () => {
-    const format = new Format({ units: [], template: '' });
+    const format = new Format({ units: [], template: '', name: 'test' });
     const parser = new Parser();
 
     parser.addFormat(format);
@@ -13,7 +13,7 @@ describe('Parser', () => {
   });
 
   it('should remove format', () => {
-    const format = new Format({ units: [], template: '' });
+    const format = new Format({ units: [], template: '', name: 'test' });
     const parser = new Parser();
     parser.addFormat(format);
 
@@ -25,7 +25,7 @@ describe('Parser', () => {
   });
 
   it('should fail to remove unadded format', () => {
-    const format = new Format({ units: [], template: '' });
+    const format = new Format({ units: [], template: '', name: 'test' });
     const parser = new Parser();
     const result = parser.removeFormat(format);
 
@@ -33,7 +33,7 @@ describe('Parser', () => {
   });
 
   it('should attempt() a single format', () => {
-    const format = new Format({ units: [], template: '' });
+    const format = new Format({ units: [], template: '', name: 'test' });
     const spy = jest.spyOn(format, 'attempt').mockReturnValue(null);
     const parser = new Parser();
 
@@ -48,9 +48,9 @@ describe('Parser', () => {
   });
 
   it('should attempt() 2 formats', () => {
-    const format1 = new Format({ units: [], template: '' });
+    const format1 = new Format({ units: [], template: '', name: 'test' });
     const spy1 = jest.spyOn(format1, 'attempt').mockReturnValue(null);
-    const format2 = new Format({ units: [], template: '' });
+    const format2 = new Format({ units: [], template: '', name: 'test' });
     const spy2 = jest.spyOn(format2, 'attempt').mockReturnValue(null);
 
     const parser = new Parser();
@@ -68,7 +68,7 @@ describe('Parser', () => {
   });
 
   it('should return invalid when all attempt()s fail', () => {
-    const format = new Format({ units: [], template: '' });
+    const format = new Format({ units: [], template: '', name: 'test' });
     jest.spyOn(format, 'attempt').mockReturnValue(null);
     const parser = new Parser();
 
@@ -82,7 +82,7 @@ describe('Parser', () => {
   });
 
   it('should return invalid on empty string', () => {
-    const format = new Format({ units: [], template: '' });
+    const format = new Format({ units: [], template: '', name: 'test' });
 
     jest.spyOn(format, 'attempt').mockReturnValue(null);
 

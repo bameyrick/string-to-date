@@ -45,7 +45,7 @@ describe('LocaleHelper general', () => {
     const matches = [null, '2020', '10', '+07:30'];
     const expected = { year: 2020, month: 10, offset: 450 };
 
-    expect(l.getObject(units, matches)).toEqual(expected);
+    expect(l.getObject(units, matches, 'test')).toEqual(expect.objectContaining(expected));
   });
 
   it('should build objects from month name', () => {
@@ -54,7 +54,7 @@ describe('LocaleHelper general', () => {
     const matches = [null, 'september', '59'];
     const expected = { month: 9, minute: 59 };
 
-    expect(l.getObject(units, matches)).toEqual(expected);
+    expect(l.getObject(units, matches, 'test')).toEqual(expect.objectContaining(expected));
   });
 
   it('should build objects from short month name', () => {
@@ -63,7 +63,7 @@ describe('LocaleHelper general', () => {
     const matches = [null, 'sep', '23'];
     const expected = { month: 9, hour: 23 };
 
-    expect(l.getObject(units, matches)).toEqual(expected);
+    expect(l.getObject(units, matches, 'test')).toEqual(expect.objectContaining(expected));
   });
 
   it('should build objects from short month name with period', () => {
@@ -72,7 +72,7 @@ describe('LocaleHelper general', () => {
     const matches = [null, 'sep.', '00'];
     const expected = { month: 9, second: 0 };
 
-    expect(l.getObject(units, matches)).toEqual(expected);
+    expect(l.getObject(units, matches, 'test')).toEqual(expect.objectContaining(expected));
   });
 
   it('should build objects from "deva" numbers', () => {
@@ -81,7 +81,7 @@ describe('LocaleHelper general', () => {
     const matches = [null, '٢٠١٧', '٦'];
     const expected = { year: 2017, month: 6 };
 
-    expect(l.getObject(units, matches)).toEqual(expected);
+    expect(l.getObject(units, matches, 'test')).toMatchObject(expected);
   });
 
   it('should handle invalid offsets', () => {

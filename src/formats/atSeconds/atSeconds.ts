@@ -1,6 +1,7 @@
 import { Format } from '../../format';
 
 export const atSeconds = new Format({
+  name: 'atSeconds',
   template: '^@(\\d+)$',
   handler: matches => {
     const seconds = parseInt(matches[1]!, 10);

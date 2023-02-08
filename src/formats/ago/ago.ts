@@ -2,6 +2,7 @@ import { UNIT_SHORTCUTS } from '../../data/unit-shortcuts';
 import { Format } from '../../format';
 
 export const ago = new Format({
+  name: 'ago',
   /* prettier-ignore */
   //          $1          $2        $3                                                                                   $4
   matcher: /^(\+|-|in|) ?([\d.]+) ?(years?|months?|weeks?|days?|hours?|minutes?|seconds?|milliseconds?|ms|s|m|h|w|d|M|y)( ago)?$/i,

@@ -20,7 +20,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
     expect(actual2).toEqual(new Date(Date.UTC(2012, 2 /* march */, 1, 15, 16, 0, 200)));
   });
 
@@ -36,7 +36,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "2 weeks"', () => {
@@ -51,7 +51,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "2 days ago"', () => {
@@ -66,7 +66,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "18 hours ago"', () => {
@@ -81,7 +81,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "1 minute ago"', () => {
@@ -96,7 +96,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "30 seconds ago"', () => {
@@ -111,7 +111,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "199 milliseconds ago"', () => {
@@ -126,7 +126,7 @@ describe('(amount) (unit) ago', () => {
       millisecond: 1,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });
 
@@ -148,7 +148,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-7 months"', () => {
@@ -163,7 +163,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-2 days"', () => {
@@ -178,7 +178,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-2 weeks"', () => {
@@ -193,7 +193,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-18 hours"', () => {
@@ -208,7 +208,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-1 minute"', () => {
@@ -223,7 +223,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-30 seconds"', () => {
@@ -238,7 +238,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "-199 milliseconds"', () => {
@@ -253,7 +253,7 @@ describe('-(amount) (unit)', () => {
       millisecond: 1,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });
 
@@ -275,7 +275,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 17 months"', () => {
@@ -290,7 +290,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 1 week"', () => {
@@ -305,7 +305,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 2 days"', () => {
@@ -320,7 +320,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 18 hours"', () => {
@@ -335,7 +335,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 1 minute"', () => {
@@ -350,7 +350,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 30 seconds"', () => {
@@ -365,7 +365,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "in 199 milliseconds"', () => {
@@ -380,7 +380,7 @@ describe('in (amount) (unit)', () => {
       millisecond: 399,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });
 
@@ -402,7 +402,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+17 months"', () => {
@@ -417,7 +417,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+2 weeks"', () => {
@@ -432,7 +432,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+2 days"', () => {
@@ -447,7 +447,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+18 hours"', () => {
@@ -462,7 +462,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+1 minute"', () => {
@@ -477,7 +477,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+30 seconds"', () => {
@@ -492,7 +492,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+199 milliseconds"', () => {
@@ -507,7 +507,7 @@ describe('+(amount) (unit)', () => {
       millisecond: 399,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });
 
@@ -529,7 +529,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+17M"', () => {
@@ -544,7 +544,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+2w"', () => {
@@ -559,7 +559,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+2d"', () => {
@@ -574,7 +574,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+18h"', () => {
@@ -589,7 +589,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+1m"', () => {
@@ -604,7 +604,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+30s"', () => {
@@ -619,7 +619,7 @@ describe('+(amount)(short unit)', () => {
       millisecond: 200,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 
   it('should handle "+199ms"', () => {
@@ -634,6 +634,6 @@ describe('+(amount)(short unit)', () => {
       millisecond: 399,
     };
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(expect.objectContaining(expected));
   });
 });

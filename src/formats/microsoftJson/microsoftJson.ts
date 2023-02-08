@@ -1,6 +1,7 @@
 import { Format } from '../../format';
 
 export const microsoftJson = new Format({
+  name: 'microsoftJson',
   matcher: /^\/Date\((\d+)([+-]\d{4})?\)\/$/,
   handler: matches => {
     const milliseconds = parseInt(matches[1]!, 10);

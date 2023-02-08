@@ -5,6 +5,7 @@ import { DateObject } from '../../models';
 
 // lots of 12h time such as "11:59", "11:59pm", "11:59:33 pm", "11:59:33 p.m."
 export const time12Hours = new Format({
+  name: 'time12Hours',
   /* prettier-ignore */
   //           $1                               $2                 $3           $4                 $5
   template: '^(.*?)_SPACE_*(?:at|on|T|)_SPACE_*(_H12_|_H24_)(?:\\:(_MIN_)(?:\\:(_SEC_))?)?_SPACE_*(_MERIDIEM_)$',
