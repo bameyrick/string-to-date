@@ -12,10 +12,6 @@ export const yearMonthDay = new Format({
   //           $1      $2        $3          $4
   template: "^(_YEAR_)([\\/. -])?(_MONTH_)\\2(_DAY_)$",
   handler: function ([dateExpr, year, separator, month, day], locale) {
-    if (!year || !month || !day) {
-      return null;
-    }
-
     if (!locHelper) {
       locHelper = new LocaleHelper(locale);
     }
@@ -37,7 +33,7 @@ export const yearMonthDay = new Format({
         return locHelper.getObject(['year', 'month', 'day'], [null, year, month, day], name);
       }
       case 6: {
-        if (year.length !== 2 && parseInt(year) <= 1900) {
+        if (year!.length !== 2 && parseInt(year!) <= 1900) {
           year = dateExpr.slice(0, 2);
 
           dateExpr = dateExpr.slice(2);
@@ -59,18 +55,18 @@ export const yearMonthDay = new Format({
         return result;
       }
       case 5: {
-        if (month[0] === '0') {
-          month = month[1];
+        if (month![0] === '0') {
+          month = month![1];
           day = dateExpr.slice(dateExpr.indexOf(month) + 1);
 
           return locHelper.getObject(['year', 'month', 'day'], [null, year, month, day], name);
-        } else if (parseInt(month[0]) > 1) {
-          month = month[0];
+        } else if (parseInt(month![0]) > 1) {
+          month = month![0];
           day = dateExpr.slice(3);
 
           return locHelper.getObject(['year', 'month', 'day'], [null, year, month, day], name);
-        } else if (day[0] === '0') {
-          day = day[1];
+        } else if (day![0] === '0') {
+          day = day![1];
 
           return locHelper.getObject(['year', 'month', 'day'], [null, year, month, day], name);
         }
