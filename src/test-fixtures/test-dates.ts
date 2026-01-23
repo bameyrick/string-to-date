@@ -10,14 +10,16 @@ export function testDates({
   formatsToRemove,
 }: {
   name: string;
-  formats: string[];
+  formats: string[] | ((locale: string) => string[]);
   expected: DateObject;
   locales: string[];
   formatsToRemove?: Format[];
 }) {
   for (const locale of locales) {
+    const localeFormats = typeof formats === 'function' ? formats(locale) : formats;
+
     describe(`${name} (${locale})`, () => {
-      for (const format of formats) {
+      for (const format of localeFormats) {
         const luxonObj = { ...expected } as DateObjectUnits & { offset?: number };
 
         const opts: DateTimeJSOptions = {};
