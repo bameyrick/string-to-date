@@ -9,13 +9,13 @@ Parse a wide range of date formats including human-input dates.
 ## Installation
 
 ```bash
-npm install string-to-date
+npm install @qntm-code/string-to-date
 ```
 
 or
 
 ```bash
-yarn add string-to-date
+yarn add @qntm-code/string-to-date
 ```
 
 ## Table of Contents
@@ -56,7 +56,7 @@ object.
 Example:
 
 ```typescript
-import StringToDate from 'string-to-date';
+import StringToDate from '@qntm-code/string-to-date';
 
 StringToDate.parse('2020-10-15');
 // same as new Date(2020, 9, 15, 0, 0, 0, 0)
@@ -77,7 +77,7 @@ month, day, hour, minute, second, millisecond, offset.
 Example:
 
 ```typescript
-import StringToDate from 'string-to-date'
+import StringToDate from '@qntm-code/string-to-date'
 
 StringToDate.parseToObject('15 Oct 2020 at 6pm');
 // returns:
@@ -137,7 +137,7 @@ Second, parsers must have `units` or `handler`.
 ### Example 1: matcher + units
 
 ```typescript
-import StringToDate from 'string-to-date';
+import StringToDate from '@qntm-code/string-to-date';
 
 parser.addFormat(
   new Format({
@@ -155,7 +155,7 @@ or Bengali. To support those you can use the `template` option given in
 ### Example 2: matcher + handler
 
 ```typescript
-import StringToDate from 'string-to-date';
+import StringToDate from '@qntm-code/string-to-date';
 
 parser.addFormat(
   new Format({
@@ -172,7 +172,7 @@ parser.addFormat(
 ### Example 3: template + units
 
 ```typescript
-import StringToDate from 'string-to-date';
+import StringToDate from '@qntm-code/string-to-date';
 
 parser.addFormat(
   new Format({
@@ -185,7 +185,7 @@ parser.addFormat(
 ### Example 4: template + handler
 
 ```typescript
-import StringToDate from 'string-to-date';
+import StringToDate from '@qntm-code/string-to-date';
 
 parser.addFormat(
   new Format({
@@ -204,7 +204,7 @@ parser.addFormat(
 To remove support for a certain format, use `removeFormat()`
 
 ```typescript
-import StringToDate, { dayMonth } from 'string-to-date';
+import StringToDate, { dayMonth } from '@qntm-code/string-to-date';
 
 parser.removeFormat(dayMonth);
 ```
@@ -215,7 +215,7 @@ To create a new parser with a limited list of formats or your own custom
 formats, use `new Parser`
 
 ```typescript
-import { Parser, time24Hours, yearMonthDay, ago } from 'string-to-date';
+import { Parser, time24Hours, yearMonthDay, ago } from '@qntm-code/string-to-date';
 
 const parser = new Parser();
 
