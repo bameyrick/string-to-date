@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout repository 🛒
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Set node version 🤖
         run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
@@ -26,7 +26,10 @@ jobs:
         run: npm run lint
 
       - name: Run the tests 🧪
-        run: npm run test --coverage --coverageReporters=lcov,text
+        run: npm run test --reporters=jest-junit
 
-      - name: Upload coverage to Codecov 📈
-        uses: codecov/codecov-action@v3
+      - name: Upload test results to Codecov 📈
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
