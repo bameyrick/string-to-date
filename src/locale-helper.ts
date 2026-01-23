@@ -49,7 +49,7 @@ export class LocaleHelper {
     }
 
     if (this.numberingSystem === 'latn') {
-      return parseInt(digitString, 10);
+      return this.arabicIndicToNumber(digitString);
     }
 
     let latn = '';
@@ -59,6 +59,10 @@ export class LocaleHelper {
     }
 
     return parseInt(latn, 10);
+  }
+
+  private arabicIndicToNumber(str: string): number {
+    return Number(str.replace(/[٠-٩]/g, d => String(d.charCodeAt(0) - 0x0660)));
   }
 
   /**
@@ -80,8 +84,7 @@ export class LocaleHelper {
       let match = matches[i + 1];
 
       if (match !== null) {
-        match = match.toLowerCase();
-        match = match.replace(/\.$/, '');
+        match = match.toLowerCase().replace(/\.$/, '');
 
         if (unit === 'offset') {
           object.offset = this.offsetToMinutes(match);
